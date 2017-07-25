@@ -2,7 +2,7 @@
 <%@ include file="member_service.jsp" %>
 <%@ include file="member_head.jsp" %>
 	<div id=join_container class="margin-auto">
-		<form id="join_form" action="member_detail.jsp" class="with-100pro">
+		<form id="join_form" action="<%=root(request)%>/member/service_add.jsp" class="with-100pro">
 		<fieldset>
 		<legend>Personal information:</legend>
 		<span>ID: </span>
@@ -15,7 +15,7 @@
 		<input name="name" type="text" placeholder="이름"/><br />
 		
 		<span>BirthDay: </span> 
-		<input name="birth" type="text"/><br />
+		<input name="birth" type="date"/><br />
 		
 		<span>Gender: </span> 
 		<input type="radio" name="gender" value="male" checked> Male

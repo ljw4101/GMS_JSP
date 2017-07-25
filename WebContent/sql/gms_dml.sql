@@ -18,7 +18,7 @@ SELECT * FROM member WHERE id='hong';
 
 update MEMBER set pw='2' where id='hong';
 
-delete from MEMBER where id='test';
+delete from MEMBER where id='test2';
 
 
 insert into board(article_seq, id, title, content, hitcount, regdate)values(article_seq.nextval, 'hong', 'title hong', '반짝이는 이상을 발휘하기 꽃이 말이다',0,SYSDATE);

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<%@ page import="com.gms.web.constant.DB, java.sql.*"%>
+<%@ include file="../constants/db.jsp" %>
+<%@ page import="java.sql.*"%>
 <% 	
-	Class.forName(DB.ORACLE_DRIVER); 
+	Class.forName(ORACLE_DRIVER); 
 	//new를 사용하지 않고 동적으로 로딩하면 DriverManager를 사용가능하다.	894p
-	Connection conn = DriverManager.getConnection(DB.ORACLE_URL, DB.USERNAME, DB.PASSWORD);
+	Connection conn = DriverManager.getConnection(ORACLE_URL, USERNAME, PASSWORD);
 	Statement stmt = conn.createStatement();
 	String sql="SELECT * FROM member WHERE id='kang'";
 	ResultSet rs = stmt.executeQuery(sql);

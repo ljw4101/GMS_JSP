@@ -46,4 +46,5 @@ label{ color:blue; font-size: 20px;width: 120px; }
 #memdetail-tab th{ background-color: powderblue; border: 1px solid black; height: 40px; }
 #memdetail-tab td{ border-bottom: 1px solid black; height: 40px; text-align: center;}
 
-
+/* member search */
+#member_search_box {width: 25%; margin: auto}

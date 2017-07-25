@@ -1,6 +1,5 @@
-package com.gms.web.constant;
-
-public class DB {
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%!
 	public static final String ORACLE_DRIVER="oracle.jdbc.driver.OracleDriver";
 	public static final String ORACLE_URL="jdbc:oracle:thin:@localhost:1521:xe";
 	public static final String DB2_DRIVER="";
@@ -32,4 +31,4 @@ public class DB {
 	public static final String BO_CONTENT="content";
 	public static final String BO_HITCOUNT="hitcount";
 	public static final String BO_REGDATE="regdate";
-}
+%>
