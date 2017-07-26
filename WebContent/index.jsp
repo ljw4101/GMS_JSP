@@ -5,8 +5,8 @@
 		<img src="<%=headRoot(request) %>/img/login.gif" alt="" />
 	</div>
 	<form id="login" action="<%=headRoot(request) %>/common/main.jsp" method="get">
-		<span>ID: </span><input type="text"  name="id"/><br /><mark>ID는 숫자포함 8자이내</mark><br />
-		<label for="">Password: </label><input type="password" name="pw"/><br />
+		<span>ID: </span><input type="text"  name="id" value="kang" /><br /><mark>ID는 숫자포함 8자이내</mark><br />
+		<label for="">Password: </label><input type="password" name="pw" value="1" /><br />
 		
 		<input type="submit" value="LOGIN" />
 		<input type="reset" value="CANCEL"/>

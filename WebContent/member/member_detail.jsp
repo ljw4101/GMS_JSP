@@ -4,51 +4,54 @@
 <%@ include file="member_service.jsp" %>
 <%@ include file="member_head.jsp" %>
 <% 	
-	
 	Class.forName(ORACLE_DRIVER);
 	String id = request.getParameter("id");
 	PreparedStatement pstmt = DriverManager.getConnection(ORACLE_URL, USERNAME, PASSWORD).prepareStatement("select * from member where id=?");
 	pstmt.setString(1, id);
-	
 	ResultSet rs = pstmt.executeQuery();
+	
 	if(rs.next()){
 %>	
 	<div id="container">
-		<h2>Hello </h2>
-		<table id="memdetail-tab">
+		<table id="member_detail_tab">
 			<tr>
-				<th>ID</th>
+				<td colspan="2" rowspan="3"><img src="<%=root(request) %>/img/profile.jpg" alt="" /></td>
+				<th class="detail_th">이름</th>
+				<td><%=rs.getString("name")%></td>
+			</tr>
+			<tr>
+				<th class="detail_th">ID</th>
 				<td><%=rs.getString("id") %></td>
 			</tr>
 			<tr>
-				<th>Password</th>
-				<td><%=rs.getString("pw") %></td>
-			</tr>
-			<tr>
-				<th>Name</th>
-				<td><%=rs.getString("name") %></td>
-			</tr>
-			<tr>
-				<th>BirthDay</th>
+				<th class="detail_th">SSN</th>
 				<td><%=rs.getString("ssn") %></td>
 			</tr>
 			<tr>
-				<th>Gender</th>
-				<td></td>
+				<th class="detail_th">전화</th>
+				<td colspan="3"></td>
 			</tr>
 			<tr>
-				<th>E-mail</th>
-				<td></td>
+				<th class="detail_th">이메일</th>
+				<td colspan="3"></td>
 			</tr>
 			<tr>
-				<th>Major</th>
-				<td></td>
+				<th class="detail_th">주소</th>
+				<td colspan="3"></td>
 			</tr>
 			<tr>
-				<th>Subject</th>
-				<td></td>
+				<th class="detail_th">전공</th>
+				<td colspan="3"></td>
 			</tr>
-		</table>
+			<tr>
+				<th class="detail_th">과목</th>
+				<td colspan="3"></td>
+			</tr>
+		</table><br />
+		<div id="btn_div">
+			<button id="list_btn" onclick="javascript:goList()" >목 록</button>
+			<button id="update_btn" onclick="javascript:goUpdate()">수 정</button>
+		</div>
 	</div>
 <% 	
 	}
@@ -61,8 +64,13 @@
 	//String email = request.getParameter("email");
 	//String major = request.getParameter("major");
 %>
-
-
+<script>
+	function goList(){
+		location.href="<%=root(request)%>/member/member_list.jsp";
+	}
 	
-	
+	function goUpdate(){
+		location.href="<%=root(request)%>/member/member_update.jsp?id=<%=rs.getString("id")%>&name=<%=rs.getString("name")%>&ssn=<%=rs.getString("ssn")%>";
+	}
+</script>
 <%@ include file="../common/footer.jsp" %>

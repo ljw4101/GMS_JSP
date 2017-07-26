@@ -28,7 +28,7 @@ label{ color:blue; font-size: 20px;width: 120px; }
 .join-button { width: 155px; height: 25px; }
 
 /* member list */
-#memlist-tab{ width: 50%; border: 2px solid blue; border-collapse: collapse;
+#memlist-tab{ width: 60%; border: 2px solid blue; border-collapse: collapse;
 			margin-top: 20px;
 		    margin-bottom: auto;
 		    margin-right: auto;
@@ -38,13 +38,17 @@ label{ color:blue; font-size: 20px;width: 120px; }
 #memlist-tab td{ border-bottom: 1px solid black; height: 40px; }
 
 /* member detail */
-#memdetail-tab{ width: 30%; border: 1px solid black; border-collapse: collapse; 
+/* #memdetail-tab{ width: 30%; border: 1px solid black; border-collapse: collapse; 
 			margin-top: 20px;
 		    margin-bottom: auto;
 		    margin-right: auto;
 		    margin-left: auto; }
 #memdetail-tab th{ background-color: powderblue; border: 1px solid black; height: 40px; }
-#memdetail-tab td{ border-bottom: 1px solid black; height: 40px; text-align: center;}
+#memdetail-tab td{ border-bottom: 1px solid black; height: 40px; text-align: center;}*/
+#member_detail_tab{ width: 50%; margin: auto; border: 1px solid black; border-collapse: collapse; }
+#member_detail_tab td, th{ border: 1px solid #808080; height: 50px;} 
+.detail_th{text-align: center; width: 200px; background-color: powderblue;}
+#btn_div{width: 10%; margin: auto;}
 
 /* member search */
 #member_search_box {width: 25%; margin: auto}
