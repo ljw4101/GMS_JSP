@@ -24,6 +24,9 @@
 		<span>E-mail: </span> 
 		<input name="email" type="email" style="width: 168px"/><br />
 		
+		<span>Phone: </span> 
+		<input name="phone" type="text" style="width: 168px"/><br />
+		
 		<h3><label for="">전공</label></h3>
 		<select name="major" style="height: 25px">
 			<option value="computer" selected>컴퓨터공학</option>

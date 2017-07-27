@@ -14,9 +14,11 @@ insert into member(id, name, pw, ssn, regdate) values ('jun', 'jihun','1','97061
 
 SELECT * FROM MEMBER;
 select count(*) as count from MEMBER;
-SELECT * FROM member WHERE id='hong';
 
 update MEMBER set pw='2' where id='hong';
+update MEMBER set phone='010-1234-5678';
+update member set major_id='computer';
+update member set profile='defaultimg.jpg';
 
 delete from MEMBER where id='test2';
 
@@ -35,5 +37,27 @@ insert into board(article_seq, id, title, content, hitcount, regdate)values(arti
 insert into board(article_seq, id, title, content, hitcount, regdate)values(article_seq.nextval, 'kang', 'title kang2', '끝까지 그들의 그와 힘차게 자신과 구하지 위하여 황금시대다',0,SYSDATE);
 
 select * from board;
+
+
+insert into major(major_id, title)values('computer', '컴퓨터');
+insert into major(major_id, title)values('economics', '경제학');
+insert into major(major_id, title)values('tourism', '관광학');
+insert into major(major_id, title)values('art', '미술학');
+
+select * from major;
+
+
+insert into subject(subj_id, title)values('java','자바');
+insert into subject(subj_id, title)values('c','C언어');
+insert into subject(subj_id, title)values('html','HTML');
+insert into subject(subj_id, title)values('css','CSS');
+insert into subject(subj_id, title)values('javascript','JavaScript');
+insert into subject(subj_id, title)values('sql','SQL');
+
+select * from subject;
+
+update subject set major_id='computer';
+
+
 
 

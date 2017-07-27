@@ -14,7 +14,7 @@
 		case "name": 
 %>
 			<script>
-			location.href="<%=request.getContextPath() %>/member/member_list.jsp?name=<%=search%>";
+			location.href="<%=request.getContextPath() %>/member/member_list.jsp?action=search&name=<%=search%>";
 			</script>
 <%
 			break;
